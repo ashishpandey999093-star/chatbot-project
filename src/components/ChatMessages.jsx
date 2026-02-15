@@ -2,6 +2,9 @@ import { useAutoScroll } from '../utility/useAutoScroll';
 import { ChatMessage } from './ChatMessage';
 import './ChatMessages.css'
 
+
+
+
 export  function ChatMessages({ chatMessages }) {
       console.log('render ChatMessages');
       const chatMessagesRef=useAutoScroll(chatMessages);
@@ -18,6 +21,7 @@ export  function ChatMessages({ chatMessages }) {
               <ChatMessage
                 message={chatMessage.message}
                 sender={chatMessage.sender}
+                isLoading={chatMessage.isLoading}
                 key={chatMessage.id}
               />
             );
